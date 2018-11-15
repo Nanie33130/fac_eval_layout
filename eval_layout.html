@@ -1,22 +1,92 @@
 <!DOCTYPE html>
 <html lang="fr">
+<style>
+	
+</style>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eval Layout</title>
 	<style>
-
+		body{
+			margin: 0;
+		}
+		img{
+			width: 100%;
+		}
+		.txtcenter{
+			text-align: center;
+		}
+		.desktopG, .desktop, .tablette{
+			display: none;
+		}
+		.content{
+			display: flex;
+			flex-direction: column;
+		}
+		@media all and (min-width : 769px){
+			.content{
+				justify-content: space-between;
+				margin:0 auto;
+				flex-direction: row;
+				flex-wrap: wrap;
+			}
+			.content div{
+				width: 50%;
+			}
+			.telephone{
+				display: none
+			}
+			.tablette{
+				display: block;
+			}
+		}
+		@media all and (min-width: 1170px){
+			.desktop{
+				display: block;
+			}
+			.tablette{
+				display: none;
+			}
+			.content{
+				width: 1170px;
+			}
+		}
+		@media all and (min-width: 1370px){
+			.desktop{
+				display: none
+			}
+			.desktopG{
+				display: block
+			}
+			.content{
+				width: 1370px;
+				flex-wrap: nowrap;
+			}
+		}
 	</style>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Eval Layout</title>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<h1 class="txtcenter">Evaluation  Layout</h1>
-		<h2 class="desktopG txtcenter">Vue Desktop > 1370px</h2>
-		<h2 class="desktop txtcenter">Vue Desktop</h2>
-		<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
-		<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
-
-
-
-	</body>
+</head>
+<body>
+	<h1 class="txtcenter">Evaluation  Layout</h1>
+	<h2 class="desktopG txtcenter">Vue Desktop > 1370px</h2>
+	<h2 class="desktop txtcenter">Vue Desktop</h2>
+	<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
+	<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
+	<div class="content">
+		<div>
+			<img src="img/mer.jpg" alt="image de mer">
+		</div>
+		<div>
+			<img src="img/lac.jpg" alt="image de lac">
+		</div>
+		<div>
+			<img src="img/montagne.jpg" alt="image de montagne">
+		</div>
+		<div>
+			<img src="img/foret.jpg" alt="image de foret">
+		</div>
+	</div>
+	
+	
+</body>
 </html>
